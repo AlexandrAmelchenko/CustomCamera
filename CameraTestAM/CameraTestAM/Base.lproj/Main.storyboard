@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CameraTestAM" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NLD-Je-lrb">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uui-jU-Wnl">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="7ji-Qz-Wq5" appends="YES" id="Tjr-Xl-qDk"/>
+                                    <outletCollection property="gestureRecognizers" destination="lY4-JD-IFZ" appends="YES" id="yS8-w5-H2Q"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="NLD-Je-lrb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="BN7-gS-aUu"/>
+                            <constraint firstItem="Uui-jU-Wnl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Cmy-LT-jdt"/>
+                            <constraint firstItem="Uui-jU-Wnl" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="DcV-SQ-zSN"/>
+                            <constraint firstAttribute="trailing" secondItem="NLD-Je-lrb" secondAttribute="trailing" id="Sn3-yI-c3A"/>
+                            <constraint firstAttribute="bottom" secondItem="Uui-jU-Wnl" secondAttribute="bottom" id="UGB-5d-o7x"/>
+                            <constraint firstAttribute="bottom" secondItem="NLD-Je-lrb" secondAttribute="bottom" id="YdO-kb-0jP"/>
+                            <constraint firstItem="NLD-Je-lrb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="fqz-8q-OmR"/>
+                            <constraint firstAttribute="trailing" secondItem="Uui-jU-Wnl" secondAttribute="trailing" id="tPs-vq-17B"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="filteredImageView" destination="NLD-Je-lrb" id="AKa-Pf-iRP"/>
+                        <outlet property="gesturesView" destination="Uui-jU-Wnl" id="e7V-fv-EAC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="7ji-Qz-Wq5">
+                    <connections>
+                        <action selector="swipeLeftHandler:" destination="BYZ-38-t0r" id="lCW-dk-MDY"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="lY4-JD-IFZ">
+                    <connections>
+                        <action selector="swipeRightHandler:" destination="BYZ-38-t0r" id="AaO-Sw-u38"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+        </scene>
+    </scenes>
+</document>
